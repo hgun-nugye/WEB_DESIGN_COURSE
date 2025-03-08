@@ -73,17 +73,15 @@ html {
 .menu a {
   color: black;
 }
-/* a .separate::after{  
-  content: "";
-  display: block;
-  position: absolute;
-  width: 1.5px;
-  height: 16px;
-  background-color: #000000;
-  right: -9px;
-  top: 50%;
-  transform: translateY(-50%);
-} */
+
+.separate::after {
+  content: '|';
+  color: #000000;
+  padding-left: 20px;
+}
+.separate:last-child::after {
+  content: '';
+}
 
 .container {
   display: flex;
