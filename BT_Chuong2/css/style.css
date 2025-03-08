@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  pad: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text-blue {
+  color: blue;
+}
+
+.header {
+  display: flex;
+  padding-top: 20px;
+  background-color: antiquewhite;
+}
+
+.header-left {
+  width: 60%;
+  margin-left: 20px;
+}
+
+.header-left-img {
+  width: 20%;
+  margin-bottom: 10px;
+}
+
+.header-left-link {
+  color: blue;
+}
+
+.header-right {
+  text-align: right;
+  width: 40%;
+  padding-right: 20px;
+}
+
+.header-right-link {
+  margin-top: 40px;
+}
+
+.header-right a,
+.footer-right a {
+  margin-left: 10px;
+
+}
+
+.header-right button {
+  padding: 8px 10px;
+  margin-left: 20px;
+  background-color: rgb(227, 25, 25);
+  border: none;
+}
+
+.menu-bg {
+  background-color: #ccc;
+}
+
+.menu {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.menu a {
+  color: black;
+}
+/* a .separate::after{  
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1.5px;
+  height: 16px;
+  background-color: #000000;
+  right: -9px;
+  top: 50%;
+  transform: translateY(-50%);
+} */
+
+.container {
+  display: flex;
+}
+
+.content {
+  margin-top: 30px;
+  width: 80%;
+}
+
+.tintuc1 {
+  line-height: 2;
+  padding-left: 20px;
+}
+
+.tin1-main {
+  display: flex;
+}
+
+.tin1-main-text {
+  margin-top: 10px;
+  margin-left: 20px;
+  text-align: justify;
+}
+
+.main-img {
+  width: 50%;
+  height: 50%;
+  padding-top: 20px;
+}
+
+.content-text {}
+
+.sub-img {
+  width: 15%;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.tintuc2 {
+  line-height: 2;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.under-border {
+  border-bottom: 1px #333 dashed;
+}
+
+.banner-contact img {
+  width: 100%;
+  padding-left: 20px;
+}
+
+.nav {
+  width: 20%;
+  margin: 20px;
+  padding-top: 20px;
+
+}
+
+.nav i {
+  color: blue;
+}
+
+.nav-link {
+  line-height: 2;
+}
+
+.nav img {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  line-height: 2;
+  background-color: antiquewhite;
+}
+
+.footer-left {
+  width: 60%;
+}
+
+.footer-right {
+  width: 40%;
+  text-align: right;
+  padding-right: 20px;
+}
