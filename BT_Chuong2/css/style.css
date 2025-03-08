@@ -3,11 +3,12 @@
   pad: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-size: 16px;
 }
 
 html {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+
 }
 
 h3 {
@@ -15,7 +16,7 @@ h3 {
   color: #fa591f;
 }
 
-h6 {
+h4 {
   color: rgb(155, 92, 20);
 }
 
@@ -119,7 +120,7 @@ h6 {
 
 .content {
   margin-top: 30px;
-  width: 85%;
+  width: 80%;
 }
 
 .sanpham1 {
@@ -176,10 +177,11 @@ h6 {
 .banner-contact img {
   width: 100%;
   padding-left: 20px;
+  padding-top: 10px;
 }
 
 .nav {
-  width: 15%;
+  width: 20%;
   margin: 20px;
   padding-top: 20px;
 
@@ -191,7 +193,6 @@ h6 {
 
 .nav-link {
   line-height: 2;
-
 }
 
 .nav-link:hover {
@@ -201,7 +202,7 @@ h6 {
 }
 
 .nav img {
-  margin-top: 24px;
+  margin-top: 20px;
   width: 100%;
   border: 1px solid rgb(155, 92, 20);
 
@@ -214,6 +215,8 @@ h6 {
   padding-left: 20px;
   line-height: 2;
   background-color: #fa591f;
+  font-size: 8px !important;
+  padding-bottom: 40px;
 }
 
 .footer-left {
@@ -225,4 +228,6 @@ h6 {
   width: 40%;
   text-align: right;
   padding-right: 20px;
+}
+.footer-right-link a{
 }
