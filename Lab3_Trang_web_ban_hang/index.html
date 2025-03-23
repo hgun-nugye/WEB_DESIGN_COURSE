@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./asset/css/style.css">
-  <link rel="stylesheet" href="../Lab_OnTap/asset/font/fontawesome-free-6.7.2-web/css/all.min.css">
+  <link rel="stylesheet" href="./asset/font/fontawesome-free-6.7.2-web/css/all.min.css">
   <!-- link google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -105,8 +105,8 @@
   <!-- today -->
   <div class="product container">
     <!-- title product -->
-    <div class="title-product">
-      <div class="box-title-product"></div>
+    <div class="title-red-section">
+      <div class="box-red"></div>
       <h4>Today's</h4>
     </div>
 
@@ -149,7 +149,7 @@
       </div>
     </div>
 
-    <!-- list product -->
+    <!-- list product of today -->
     <div class="list-product">
       <div class="box-product">
         <!-- product 1 -->
@@ -166,7 +166,10 @@
           </div>
           <div class="detail-product">
             <h5>HAVIT HV-G92 Gamepad</h5>
-            <p>$120</p>
+            <div class="price-product">
+              <p>$120</p>
+              <p class="ordinary-price">$160</p>
+            </div>
             <div class="star-product">
               <div class="start-img">
                 <img src="./asset/images/icon-star/star-yellow.png" alt="">
@@ -195,10 +198,13 @@
             <p class="add-cart">
               Add To Cart
             </p>
-          </div>          
+          </div>
           <div class="detail-product">
             <h5>AK-900 Wired Keyboard</h5>
-            <p>$960</p>
+            <div class="price-product">
+              <p>$960</p>
+              <p class="ordinary-price">$1160</p>
+            </div>
             <div class="star-product">
               <div class="start-img">
                 <img src="./asset/images/icon-star/star-yellow.png" alt="">
@@ -228,7 +234,10 @@
           </div>
           <div class="detail-product">
             <h5>IPS LCD Gaming Monitor</h5>
-            <p>$370</p>
+            <div class="price-product">
+              <p>$370</p>
+              <p class="ordinary-price">$400</p>
+            </div>
             <div class="star-product">
               <div class="start-img">
                 <img src="./asset/images/icon-star/star-yellow.png" alt="">
@@ -257,8 +266,10 @@
           </div>
           <div class="detail-product">
             <h5>S-Series Comfort Chair</h5>
-            <p>$375
-            <p>
+            <div class="price-product">
+              <p>$375</p>
+              <p class="ordinary-price">$400</p>
+            </div>
             <div class="star-product">
               <div class="start-img">
                 <img src="./asset/images/icon-star/star-yellow.png" alt="">
@@ -274,10 +285,247 @@
         <!-- end product 4 -->
 
       </div>
-      <button class="btn-view-all-product">
+      <button class="btn-view-all-product center-btn">
         View All Products
       </button>
     </div>
+  </div>
+  <!-- end today -->
+
+  <!-- categories -->
+  <div class="product container categories">
+    <!-- title categories -->
+    <div class="title-red-section">
+      <div class="box-red"></div>
+      <h4>Categories</h4>
+    </div>
+
+
+    <div class="content-product">
+      <h3 class="categories-title-p">Browse By Category</h3>
+      <div class="icon-container">
+        <i class="fa-solid fa-arrow-left"></i>
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    </div>
+
+    <div class="categories-img-section">
+      <!-- product 1 -->
+      <div class="product-categories">
+        <img src="./asset/images/icon_category/Category-CellPhone.png" alt="" class="categories-img">
+        <p>Phones</p>
+      </div>
+
+      <!-- product-categories 2 -->
+      <div class="product-categories">
+        <img src="./asset/images/icon_category/Category-Computer.png" alt="" class="categories-img">
+        <p>Computers</p>
+      </div>
+
+      <!-- product-categories 3 -->
+      <div class="product-categories">
+        <img src="./asset/images/icon_category/Category-SmartWatch.png" alt="" class="categories-img">
+        <p>SmartWatch</p>
+      </div>
+
+      <!-- product-categories 4 -->
+      <div class="product-categories">
+        <img src="./asset/images/icon_category/Category-Camera.png" alt="" class="categories-img red-bg">
+        <p class="red-bg-p">Cameras</p>
+      </div>
+
+      <!-- product-categories 5 -->
+      <div class="product-categories">
+        <img src="./asset/images/icon_category/Category-Headphone.png" alt="" class="categories-img">
+        <p>Headphones</p>
+      </div>
+
+      <!-- product-categories 6 -->
+      <div class="product-categories">
+        <img src="./asset/images/icon_category/Category-Gamepad.png" alt="" class="categories-img">
+        <p>Gaming</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- this month -->
+  <div class="product container product-none-bdbottom">
+    <!-- title this month -->
+    <div class="title-red-section">
+      <div class="box-red"></div>
+      <h4>This Month</h4>
+    </div>
+
+    <!-- content this month -->
+    <div class="content-product">
+      <h3>Best Seling Product</h3>
+      <!-- button view all -->
+      <button class="btn-view-all-product">
+        View All
+      </button>
+    </div>
+
+    <!-- list product of today -->
+    <div class="list-product">
+      <div class="box-product">
+        <!-- product 1 -->
+        <div class="product-1">
+          <div class="product-img">
+            <img src="./asset/images/best_product/nortCoat.png" alt="">
+            <div class="icon-on-product">
+              <div class="icon-user-product">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+          </div>
+          <div class="detail-product">
+            <h5>The north coat</h5>
+            <div class="price-product">
+              <p>$260</p>
+              <p class="ordinary-price">$360</p>
+            </div>
+            <div class="star-product">
+              <div class="start-img">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+              </div>
+              <p>(65)</p>
+            </div>
+          </div>
+        </div>
+        <!-- end product 1 -->
+
+        <!-- product 2 -->
+        <div class="product-2">
+          <div class="product-img">
+            <img src="./asset/images/best_product/dufflebag.png" alt="">
+            <div class="icon-on-product">
+              <div class="icon-user-product">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+          </div>
+          <div class="detail-product">
+            <h5>Gucci duffle bag</h5>
+            <div class="price-product">
+              <p>$960</p>
+              <p class="ordinary-price">$1160</p>
+            </div>
+            <div class="star-product">
+              <div class="start-img">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+              </div>
+              <p>(65)</p>
+
+            </div>
+          </div>
+        </div>
+        <!-- end product 2 -->
+
+        <!-- product 3 -->
+        <div class="product-3">
+          <div class="product-img">
+            <img src="./asset/images/best_product/cpuCooler.png" alt="">
+            <div class="icon-on-product">
+              <div class="icon-user-product">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+          </div>
+          <div class="detail-product">
+            <h5>IPS LCD Gaming Monitor</h5>
+            <div class="price-product">
+              <p>$370</p>
+              <p class="ordinary-price">$170</p>
+            </div>
+            <div class="star-product">
+              <div class="start-img">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+                <img src="./asset/images/icon-star/star-half-filled.png" alt="">
+              </div>
+              <p>(65)</p>
+            </div>
+          </div>
+        </div>
+        <!-- end product 3 -->
+
+        <!-- product 4 -->
+        <div class="product-4">
+          <div class="product-img">
+            <img src="./asset/images/best_product/bookself.png" alt="">
+            <div class="icon-on-product">
+              <div class="icon-user-product">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+          </div>
+          <div class="detail-product">
+            <h5>Small Bookself</h5>
+            <p>$360
+            <p>
+            <div class="star-product">
+              <div class="start-img">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+                <img src="./asset/images/icon-star/star-yellow.png" alt="">
+              </div>
+              <p>(65)</p>
+            </div>
+          </div>
+        </div>
+        <!-- end product 4 -->
+
+      </div>
+    </div>
+    <div class="product-bg">
+      <div class="content-bg-this-month">
+        <h6>Categories</h6>
+        <h2>Enhance Your <br>Music Experience</h2>
+        <div class="gr-time">
+          <div class="time">
+            <p><b>23</b></p>
+            <p>Hours</p>
+          </div>
+          <div class="time">
+            <p><b>05</b></p>
+            <p>Days</p>
+          </div>
+          <div class="time">
+            <p><b>59</b></p>
+            <p>Minutes</p>
+          </div>
+          <div class="time">
+            <p><b>35</b></p>
+            <p>Seconds</p>
+          </div>
+        </div>
+        <button class="buy-now">
+          Buy Now!
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- end this month -->
+
+
+
 </body>
 
 </html>
