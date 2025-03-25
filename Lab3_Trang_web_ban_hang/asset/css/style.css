@@ -45,6 +45,18 @@ a {
   margin: 0 auto;
 }
 
+.icon-up-to {
+  position: fixed;
+  bottom: 50px;
+  right: 0px;
+  z-index: 2;
+}
+
+.icon-up-to i {
+  color: black;
+  transition: 2s;
+}
+
 .header {
   max-width: 100%;
   background-color: #000;
@@ -140,7 +152,9 @@ a {
   border: none;
   outline: none;
   background-color: transparent;
-  font-size: 12px;
+  font-size: 11px;
+  font-family: "Poppins", sans-serif;
+
 }
 
 .search i {
@@ -397,11 +411,12 @@ a {
   margin-bottom: 14px;
 }
 
-.product-2 {
+.product-item {
   position: relative;
 }
 
 .add-cart {
+  display: none;
   background-color: black;
   color: white;
   padding: 7px;
@@ -410,6 +425,9 @@ a {
   position: absolute;
   bottom: 0;
   font-size: 14px;
+}
+.product-item:hover .add-cart{
+  display: block;
 }
 
 .detail-product {
@@ -727,15 +745,6 @@ a {
 .about-element h2 {
   padding-top: 10px;
   text-transform: uppercase;
-}
-
-.icon-up-to {
-  width: 100%;
-  text-align: end;
-}
-
-.icon-up-to i {
-  padding: 10px 12px;
 }
 
 .footer {
