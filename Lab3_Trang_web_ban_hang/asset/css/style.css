@@ -24,6 +24,10 @@ a {
   text-decoration: none;
 }
 
+i:hover {
+  cursor: pointer;
+}
+
 .textcent {
   text-align: center;
 }
@@ -48,13 +52,13 @@ a {
 .icon-up-to {
   position: fixed;
   bottom: 50px;
-  right: 0px;
+  right: 10%;
   z-index: 2;
 }
 
-.icon-up-to i {
+.icon-up-to a i {
   color: black;
-  transition: 2s;
+  padding: 10px 13px;
 }
 
 .header {
@@ -129,15 +133,17 @@ a {
 
 .box-user {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   width: 30%;
   padding: 0 10px;
 
 }
-
+.box-user a i{
+  color: black;
+}
 .search {
-  width: 80%;
+  width: 78%;
   height: 30px;
   display: flex;
   justify-content: space-between;
@@ -424,8 +430,11 @@ a {
   position: absolute;
   bottom: 0;
   font-size: 14px;
+  border-radius: 0 0 4px 4px;
+
 }
-.product-item:hover .add-cart{
+
+.product-item:hover .add-cart {
   display: block;
 }
 
@@ -758,7 +767,7 @@ a {
 
 .footer-flex {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: 20% 20% 15% 15% 20%;
   gap: 30px;
   margin-bottom: 50px;
 }
@@ -773,22 +782,22 @@ a {
   border: 1px solid white;
   background-color: black;
   border-radius: 4px;
-  margin-top: 10px;
+  height: auto;
 }
 
 .exclusive form input {
-  padding: 10px;
   outline: none;
   border: none;
   background-color: black;
+  border-radius: 4px;
   font-family: "Poppins", sans-serif;
   font-size: 12px;
+  padding: 10px;
 }
 
 .exclusive form img {
   height: fit-content;
-  display: flex;
-  padding: 10px;
+  padding: 10px 8px 0 0;
 }
 
 .account ul li {
@@ -808,8 +817,7 @@ a {
 .qr-application {
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto;
-  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 10px;
   line-height: 1;
 }

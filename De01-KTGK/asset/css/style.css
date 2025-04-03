@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+:root {
+    --first-color: #054C73;
+    --second-color: #F2F5FF;
+    --third-color: #03344F;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.disflex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+}
+
+.btn-bot {
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--second-color);
+    background-color: var(--first-color);
+    border-radius: 50px;
+    width: fit-content;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .left {
+    width: 50%;
+    color: var(--third-color);
+}
+
+.header .right {
+    width: 50%;
+}
+
+.header .right ul {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+
+.arrival {
+    width: 100%;
+    height: 100%;
+}
+
+.bg-img {
+    width: 100%;
+    background-image: url('/asset/images/scandinavian-decal-background.png');
+    background-size: contain;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.new-arrival-text {
+    position: absolute;
+    right: 5%;
+    width: 40%;
+    background-color: #c7e3f2;
+    text-transform: capitalize;
+    padding: 30px;
+    border-radius: 10px;
+
+}
+
+.new-arrival-text p:first-child {
+    color: gray;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.new-arrival-text h1 {
+    color: var(--first-color);
+    font-size: 44px;
+    margin-bottom: 20px;
+}
+
+.new-arrival-text p:last-child {
+    color: black;
+    padding-bottom: 20px;
+}
+
+.infor {
+    padding: 40px 0;
+    background-color: rgb(210, 231, 239);
+}
+
+.item {
+    display: flex;
+
+}
+
+.item img {
+    width: fit-content;
+    height: fit-content;
+    padding-right: 30px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 3;
+}
+
+.collection {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.collection h2 {
+    text-transform: capitalize;
+    font-size: 24px;
+
+}
+
+.collection p {
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.img1 {
+    width: 100%;
+    border-radius: 50px 0 0 0;
+    margin-top: 30px;
+}
+
+.img2 {
+    max-width: 100%;
+}
+
+.img3 {
+    width: 100%;
+    border-radius: 0 0 50px 0;
+    margin-top: 30px;
+}
+
+.beauty {
+    width: 100%;
+    background-color: rgb(210, 231, 239);
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 10%;
+}
+
+.beauty-left {
+    width: 50%;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.beauty-left h2 {
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.beauty-right {
+    width: 50%;
+    padding-left: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.green-hiden {
+    background-color: rgb(2, 78, 22);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding-left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 0;
+}
+
+.beauty-right img {
+    width: 90%;
+    border-radius: 100px 0 100px 0;
+    z-index: 10;
+}
+
+.footer {
+    padding: 30px 10% 50px 10%;
+    background-color: var(--first-color);
+    color: var(--second-color);
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+}
+
+.footer h2 {
+    text-transform: capitalize;
+}
+
+.footer-left {
+    max-width: 40%;
+}
+
+.footer-left h2:first-child {
+    padding-bottom: 20px;
+}
+
+.footer-right {
+    max-width: 55%;
+}
+
+.footer-right .img {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.footer-right .img img {
+    max-width: 100%;
+}

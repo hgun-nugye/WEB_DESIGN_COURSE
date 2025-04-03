@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./asset/css/signup_style.css">
+  <link rel="stylesheet" href="./asset/css/account_style.css">
   <link rel="stylesheet" href="./asset/font/fontawesome-free-6.7.2-web/css/all.min.css">
   <!-- link google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +38,7 @@
           <li><a href="./index.html">Home</a></li>
           <li><a href="#">Contact</a></li>
           <li><a href="./about.html">About</a></li>
-          <li><a href="#" style="text-decoration: underline;">Sign Up</a></li>
+          <li><a href="./signup.html">Sign Up</a></li>
         </ul>
       </div>
 
@@ -47,41 +47,113 @@
         <form action="" class="search">
           <input type="search" name="" id="" placeholder="What are you looking for?">
           <i class="fa-solid fa-magnifying-glass"></i>
+
         </form>
+        <div class="box-user-icon">
+          <i class="fs20 pl20 pr20 fa-regular fa-heart"></i>
+          <a href="./wishlist.html"><i class="fs20 fa-solid fa-cart-shopping"></i></a>
+          <i class="user fa-regular fa-user"></i>
+        </div>
+
+
       </div>
     </div>
   </div>
 
   <!-- content -->
-  <div class="signup container">
-    <!-- left section -->
-    <div class="left">
-      <img src="./asset/images/Side Image.png" alt="">
+  <div class="content container">
+    <!-- header -->
+    <div class="content-header">
+      <div class="content-header-left">
+        <div class="link-home"><a href="./index.html">Home </a></div>
+        <p> / My Account</p>
+      </div>
+      <div class="content-header-right">
+        <p>Welcome! <span style="color: red;">Huong Nguyen</span></p>
+      </div>
     </div>
-    <!-- right section -->
-    <div class="right">
-      <h1>Create an account</h1>
-      <p>Enter your details below</p>
-      <form action="">
-        <input type="text" name="" id="" placeholder="Name">
+    <!-- main -->
+    <div class="content-main">
+      <!-- left -->
+      <div class="content-left">
+        <div class="content-manage">
+          <div class="content-main-header ">
+            <h4>manage my account</h4>
+            <ul>
+              <li> <a href="#"> my profile </a></li>
+              <li> <a href="#"> address book </a></li>
+              <li> <a href="#"> my payments option </a></li>
+            </ul>
+          </div>
 
-        <input type="email" name="" id="" placeholder="Email or Phone Number">
+          <div class="content-order">
+            <div class="content-main-header">
+              <h4>my orders</h4>
+              <ul>
+                <li> <a href="#"> my returns </a></li>
+                <li> <a href="#"> my cancellationsk</a></li>
+              </ul>
+            </div>
 
-        <input type="password" name="" id="" placeholder="Password">
-      </form>
+          </div>
 
-      <button class="btn-create-acc">
-        Create Account
-      </button>
+          <div class="content-wishlist">
+            <div class="content-main-header">
+              <h4>my wishList</h4>
+            </div>
+          </div>
+        </div>
 
-      <button class="btn-signup-gg">
-        <img src="./asset/images/google-tile.svg" alt="">
-        Sign up with Google
-      </button>
-      <p class="login-next">Already have an account? <a href="./login.html" target="_blank">Login</a></p>
+
+      </div>
+
+      <!-- right -->
+      <div class="content-right">
+        <div class="conten-right-header">
+          <h3>edit your profile</h3>
+          <form action="" class="four-items">
+
+            <div class="item1">
+              <h6>first name</h6>
+              <input type="text" name="" id="" placeholder="Huong">
+            </div>
+
+            <div class="item2">
+              <h6>last name</h6>
+              <input type="text" name="" id="" placeholder="Nguyen">
+            </div>
+
+            <div class="item3">
+              <h6>email</h6>
+              <input type="email" name="" id="" placeholder="huong.ntt.65cntt@ntu.edu.vn">
+            </div>
+
+            <div class="item4">
+              <h6>address</h6>
+              <input type="address" name="" id="" placeholder="02 Nguyen Dinh Chieu">
+            </div>
+
+          </form>
+
+          <form action="" class="three-items">
+            <h6>password changes</h6>
+            <input type="password" name="" id="" placeholder="Current Password">
+            <br>
+            <input type="password" name="" id="" placeholder="New Password">
+            <br>
+            <input type="password" name="" id="" placeholder="Confirm New Password">
+          </form>
+        </div>
+        <div class="save-bottom">
+          <p>Cancel</p>
+          <button class="btn-save">save changes</button>
+        </div>
+
+      </div>
     </div>
   </div>
-`
+
+
   <!-- footer -->
   <footer class="footer">
     <div class="footer-flex container">
