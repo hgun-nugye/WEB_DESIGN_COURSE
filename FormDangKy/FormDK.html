@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="" onsubmit="return submit()">
+    <form action="" method="post" onsubmit="return validateForm()">
         <h2>FORM ĐĂNG KÝ </h2>
         <label for="user_name">User name</label>
         <br>
@@ -28,47 +28,51 @@
         <input type="password" name="cf_password" id="cf_password">
         <br>
         <button type="submit">Submit</button>
-        <button type="button" id="reset" onclick="Reset()">Reset</button>
+        <button type="button" id="reset" onclick="resetForm()">Reset</button>
     </form>
 
     <script>
-        function submit() {
+        function validateForm() {
             var user = document.getElementById('user_name').value;
             var email = document.getElementById('email').value;
             var password = document.getElementById('password').value;
             var cfpassword = document.getElementById('cf_password').value;
 
-            if (user === "") {
+            if (user == "") {
                 alert("User name should not be empty!");
                 return false;
             }
-            else if (user.length < 4) {
+            if (user.length < 4) {
                 alert("The length of user name must be over 4");
                 return false;
             }
 
-            if (email === "") { alert("Email should not be empty!"); return false; }
+            if (email == "") { 
+                alert("Email should not be empty!"); 
+                return false; }
 
-            if (password === "") {
+            if (password == "") {
                 alert("Password should not be empty!");
                 return false;
             }
-            else if (password.length < 8) {
-                alert("The length of password must least at 8");
+            if (password.length < 8) {
+                alert("The length of password must be at least 8");
                 return false;
             }
 
-            if (cfpassword === "") {
+            if (cfpassword == "") {
                 alert("Password is not confirmed!");
                 return false;
-            } else if (cfpassword !== password) {
+            } 
+             if (cfpassword !== password) {
                 alert("Password confirmation does not match.");
                 return false;
             }
+            alert("Submit your information successfully!");
             return true;
         }
 
-        function Reset() {
+        function resetForm() {
             document.getElementById('user_name').value = null;
             document.getElementById('email').value = null;
             document.getElementById('password').value = null;
