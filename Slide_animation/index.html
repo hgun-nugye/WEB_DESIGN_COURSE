@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider with Slide Effect</title>
+    <style type="text/css">
+        .slider {
+            width: 50%;
+            height: 400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            /* Giúp ẩn những hình ảnh ra ngoài khỏi container */
+        }
+
+        .slider img {
+            width: 100%;
+            height: 400px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            /* Bắt đầu với độ mờ 0 */
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            /* Thêm hiệu ứng trượt */
+        }
+
+        .slider img.active {
+            opacity: 1;
+            /* Hình ảnh đang được hiển thị có độ mờ 1 */
+            transform: translateX(0);
+            /* Đặt lại vị trí */
+        }
+
+        .slider img.next {
+            transform: translateX(-100%);
+            /* Dịch chuyển bên phải cho ảnh tiếp theo */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <img src="./image/capy.jpg" alt="img" class="active">
+        <img src="./image/capy2.jpg" alt="img" class="next">
+        <img src="./image/capy3.jpg" alt="img">
+        <img src="./image/capy4.jpg" alt="img">
+        <img src="./image/capy5.jpg" alt="img">
+        <img src="./image/capy6.jpg" alt="img">
+    </div>
+
+    <script type="text/javascript">
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.querySelectorAll(".slider img");
+
+            // Reset classes for all slides
+            slides.forEach(slide => {
+                slide.classList.remove("active", "next", "prev");
+            });
+
+            let currentSlide = slides[slideIndex];
+            let nextSlide = slides[(slideIndex + 1) % slides.length];
+
+            // Set initial active class
+            currentSlide.classList.add("active");
+
+            // Trigger the slide animation after a short delay to ensure classes are applied
+            setTimeout(() => {
+                nextSlide.classList.add("next");
+            }, 10); // Small delay to allow browser to apply classes
+
+            slideIndex++;
+
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+
+            // Repeat
+            setTimeout(showSlides, 2000);
+        }
+        showSlides();
+    </script>
+</body>
+
+</html>

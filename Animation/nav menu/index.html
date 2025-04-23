@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- link font boxicon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Animated nav menu</title>
+</head>
+
+<body>
+    <nav class="nav__menu">
+        <ul>
+            <li class="nav__menu__content active">
+                <a href="#">
+                    <i class='icon bx bx-home-alt'></i>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="nav__menu__content">
+                <a href="#">
+                    <i class='icon bx bx-message-dots'></i>
+                    <span class="text">Messages</span>
+                </a>
+            </li>
+            <li class="nav__menu__content">
+                <a href="#">
+                    <i class='icon bx bx-user'></i>
+                    <span class="text">Profile</span>
+                </a>
+            </li>
+            <li class="nav__menu__content">
+                <a href="#">
+                    <i class='icon bx bx-camera'></i>
+                    <span class="text">Photo</span>
+                </a>
+            </li>
+            <li class="nav__menu__content">
+                <a href="#">
+                    <i class='icon bx bx-cog'></i>
+                    <span class="text">Setting</span>
+                </a>
+            </li>
+
+            <div class="idicator"></div>
+        </ul>
+    </nav>
+
+    <!-- đoạn mã javascript -->
+    <script>
+        let list = document.querySelectorAll('.nav__menu__content');
+        function activeLink() {
+            list.forEach((item) => item.classList.remove('active'));
+            this.classList.add('active');
+
+        }
+        list.forEach((item) => item.addEventListener('click', activeLink))
+    </script>
+</body>
+
+</html>

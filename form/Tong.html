@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh Tong </title>
+</head>
+
+<body>
+    <form action="">
+        <label for="a">a:</label>
+        <input type="number" name="a" id="a">
+        <br>
+        <label for="b">b:</label>
+        <input type="number" name="b" id="b">
+        <br>
+        <label for="sum">Tổng:</label>
+        <input type="number" name="sum" id="sum" readonly>
+        <br>
+        <input type="button" id="" onclick="tong()" value="Tính tổng">
+
+    </form>
+    <script>
+        function tong() {
+            var a = document.getElementById('a').value;
+            var b = document.getElementById('b').value;
+            document.getElementById('sum').value = parseFloat(a) + parseFloat(b);
+        }
+    </script>
+</body>
+
+</html>

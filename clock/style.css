@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1b4d6b; /* Màu nền */
+    color: white; /* Màu chữ */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.text-section {
+    max-width: 40%;
+}
+
+.text-section h2 {
+    font-size: 24px;
+}
+
+.text-section p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.image-section {
+    max-width: 55%;
+}
+
+.image-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.images img {
+    width: 100%; /* Căn chỉnh chiều rộng hình ảnh */
+    max-width: 24%; /* Đảm bảo hình ảnh không lớn quá 24% */
+    border-radius: 5px; /* Bo góc hình ảnh */
+}

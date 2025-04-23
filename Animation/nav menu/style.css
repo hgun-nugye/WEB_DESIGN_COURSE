@@ -1,0 +1,154 @@
+/* import font poppins */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 1em;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #222344;
+}
+
+.nav__menu {
+    width: 450px;
+    height: 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.nav__menu ul {
+    width: 400px;
+    display: flex;
+    position: relative;
+}
+
+.nav__menu ul li {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.nav__menu ul li a {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 500;
+
+}
+
+.nav__menu ul li a i.icon {
+    position: relative;
+    display: block;
+    font-size: 1.5em;
+    line-height: 60px;
+    transition: 0.5s;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.nav__menu ul li.active a i.icon {
+    transform: rotateY(-8px);
+    color: #29fd53;
+}
+
+.nav__menu ul li .text {
+    position: absolute;
+    font-weight: 400;
+    font-size: 0.5em;
+    color: #333;
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transform: translateY(22px);
+}
+
+.nav__menu ul li.active .text {
+    opacity: 1;
+    color: #222344;
+}
+
+.idicator {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.idicator::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 15px;
+    bottom: 20px;
+    background-color: #29fd53;
+    border-radius: 10px;
+}
+
+.idicator::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: -3px;
+    background-color: #29fd53;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #29fd53,
+        50px 50px #29fd53,
+        0px 50px #29fd53,
+        50px 0px #29fd53;
+    transform: rotate(45deg);
+    animation: animate 2s ease-in-out infinite;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        transform: rotate(35deg);
+    }
+
+    55% {
+        transform: rotate(55deg);
+    }
+}
+
+.nav__menu ul li:nth-child(2).active~.idicator {
+    transform: translateX(calc(80px*1));
+}
+
+.nav__menu ul li:nth-child(3).active~.idicator {
+    transform: translateX(calc(80px*2));
+}
+
+.nav__menu ul li:nth-child(4).active~.idicator {
+    transform: translateX(calc(80px*3));
+}
+
+.nav__menu ul li:nth-child(5).active~.idicator {
+    transform: translateX(calc(80px*4));
+}
