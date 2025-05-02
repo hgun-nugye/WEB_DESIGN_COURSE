@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="result">Di chuyển chuột để thấy số ngẫu nhiên!</div>
+    <button id="stop_random">Dừng</button>
+    <input type="text" name="" id="in">
+
+    <script>
+        var result = document.getElementById("result");
+        var button = document.getElementById("stop_random");
+
+        function do_random() {
+            var randomNumber = Math.random(); // Tạo số ngẫu nhiên
+            result.innerHTML = randomNumber; // Cập nhật nội dung
+        }
+
+        document.addEventListener("mousemove", do_random); // Gán sự kiện cho toàn bộ tài liệu
+
+        button.addEventListener("click", function () {
+            document.removeEventListener("mousemove", do_random); // Xóa sự kiện mousemove
+        });
+
+        // var button = document.getElementById("in");
+        // console.log(button.type); // Trả về giá trị kiểu dữ liệu
+        // console.log(button.getAttribute("type")); // Trả về giá trị như một chuỗi
+    </script>
+
+</body>
+
+</html>
