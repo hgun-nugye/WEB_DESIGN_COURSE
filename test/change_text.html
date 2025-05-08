@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Change Styles with JavaScript</title>
+</head>
+
+<body>
+    <div id="message" class="text-shadow-xs">Chào mừng các bạn đến với JavaScript</div>
+
+    <input type="button" value="Change Background" id="change_background" onclick="change_background()">
+    <input type="button" value="Change Color" id="change_color" onclick="change_color()">
+    <input type="button" value="Change Font Size" id="change_font_size" onclick="change_font_size()">
+
+    <script>
+        let bgColorIndex = 0;
+        let textColorIndex = 0;
+        let fontSizeIndex = 0;
+
+        const bgColors = ['red', 'blue', 'green', 'yellow', 'pink'];
+        const textColors = ['blue', 'black', 'orange', 'purple', 'brown'];
+        const fontSizes = ['20px', '25px', '30px', '35px', '40px'];
+
+        function change_background() {
+            bgColorIndex = (bgColorIndex + 1) % bgColors.length; // Tiến tới màu tiếp theo
+            document.getElementById("message").style.background = bgColors[bgColorIndex];
+        }
+
+        function change_color() {
+            textColorIndex = (textColorIndex + 1) % textColors.length; // Tiến tới màu chữ tiếp theo
+            document.getElementById("message").style.color = textColors[textColorIndex];
+        }
+
+        function change_font_size() {
+            fontSizeIndex = (fontSizeIndex + 1) % fontSizes.length; // Tiến tới kích thước chữ tiếp theo
+            document.getElementById("message").style.fontSize = fontSizes[fontSizeIndex];
+        }
+    </script>
+</body>
+
+</html>
