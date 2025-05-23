@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <div id="content">
+      <h5>Xin chào các bạn</h5>
+      <h5>Chúc vui vẻ khi hoc bài</h5>
+    </div>
+
+    <input type="button" value="View" id="btn-view" />
+
+    <script language="javascript">
+      var button = document.getElementById("btn-view");
+      button.addEventListener("click", function () {
+        var h1 = document.createElement("h1");
+        h1.innerHTML = "Welcome to Tiil Tutors";
+        var element = document.getElementById("content");
+        var element_child = document.getElementsByTagName("h5")[1];
+        element.insertBefore(h1, element_child);
+      });
+    </script>
+  </body>
+</html>

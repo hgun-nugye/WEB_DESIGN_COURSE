@@ -1,0 +1,213 @@
+:root {
+  --primary: #3cb815;
+  --light: #f7f8fc;
+  --second: #f8f8f8;
+  --danger: #eb5818;
+}
+.text-gray{
+  color: gray !important;
+}
+.text-primary{
+  color: var(--primary) !important;
+  font-weight: 500 !important;
+}
+.text-danger{
+  color: var(--danger) !important;
+  font-weight: 500 !important;
+}
+a {
+  text-decoration: none;
+}
+.bg-danger {
+  background-color: var(--danger) !important;
+}
+.top_bar {
+  height: 45px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.304);
+}
+.btn-sm-quare {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 25%;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--primary);
+  border: 10px solid var(--primary);
+  border-radius: 3rem;
+}
+.carousel-caption {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+  z-index: 1;
+}
+.btn {
+  padding: 8px 3rem !important;
+  border: none !important;
+}
+.btn-primary {
+  background-color: var(--primary);
+}
+.btn-secondary {
+  background-color: var(--danger);
+}
+.bg-icon {
+  background: url(img/bg-icon.png) center center repeat;
+  background-size: contain;
+}
+.section-header {
+  position: relative;
+}
+.section-header::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  height: 2px;
+  width: 15%;
+  transform: translate(-50%);
+  background-color: var(--primary);
+}
+.section-header::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  height: 2px;
+  width: 25%;
+  transform: translate(-50%);
+  background-color: var(--danger);
+  margin-bottom: 50px;
+}
+.product .section-header::after,
+.product .section-header::before {
+  left: 0;
+  transform: none;
+}
+.btn-outline-primary {
+  border: 2px solid var(--primary) !important;
+  color: #000000;
+}
+.btn-outline-primary:visited,
+.btn-outline-primary:active {
+  background-color: var(--primary) !important;
+  color: black;
+}
+.active-tab {
+  background-color: var(--primary) !important;
+  color: white;
+}
+.product-item {
+  box-shadow: 0 0 45px rgba(128, 128, 128, 0.42);
+}
+.product-item img {
+  transition: 0.5s;
+}
+.product-item img:hover {
+  transform: scale(1.2);
+}
+.product-item a:hover {
+  color: var(--primary);
+}
+.btn-new:hover {
+  background-color: var(--primary) !important;
+}
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+.review-carousel .owl-item .review-item img {
+  width: 60px;
+  height: 60px;
+}
+.review-carousel .owl-item .review-item,
+.review-carousel .owl-item .review-item * {
+  transition: 0.5s;
+}
+.mt-n4 {
+  margin-top: -30px !important;
+}
+.review-carousel .owl-item.center .review-item {
+  background-color: var(--primary) !important;
+}
+.review-carousel .owl-item.center .review-item * {
+  color: white !important;
+}
+.review-carousel .owl-item.center .review-item i {
+  color: var(--danger) !important;
+}
+.review-carousel .owl-nav {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.review-carousel .owl-nav .owl-prev,
+.review-carousel .owl-nav .owl-next {
+  margin: 0 20px;
+  height: 50px;
+  width: 50px;
+  border: 2px solid var(--primary) !important;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  transition: 0.5s;
+}
+.review-carousel .owl-nav .owl-prev:hover,
+.review-carousel .owl-nav .owl-next:hover {
+  color: white !important;
+  background-color: var(--primary) !important;
+}
+.fa-user,
+.fa-calendar {
+  color: var(--primary) !important;
+}
+.icon i {
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer{
+  color: gray !important;
+}
+footer li a{
+  color: gray !important;
+}
+.list-unstyled li {
+  line-height: 1.4 !important;
+}
+.group-input{
+  border: 1px solid white;
+  width: 100%;
+  display: flex;
+}
+.group-input button{
+  width: 30% !important;
+  padding: 8px 14px !important;
+}
+.reserved{
+  border-top: 1px solid gray;
+  width: 100%;
+  
+}

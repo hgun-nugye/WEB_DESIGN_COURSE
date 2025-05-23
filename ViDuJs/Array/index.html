@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr1 = new Array();
+      var arr2 = new Array(10);
+      var arr3 = new Array(1, 2, "ABC", true);
+      var arr4 = [1, 2, "ABC", false];
+
+      var t = new Array(1, 2, 3);
+      document.writeln(t.join());
+      document.writeln(t.join("-"));
+
+      var t = new Array(1, 2, 3);
+      console.log(t);
+
+      var name_arr = [1, 2, 3];
+      for (var i = 0; i < name_arr.length; i++) {
+        document.writeln(name_arr[i]);
+      }
+
+      var name = [1, 2, 3];
+      var index = 0;
+      while (index < name.length) {
+        document.writeln(name[index]);
+        index++;
+      }
+
+      //toString() or valueOf()
+      var mang = ["hoc", "lap", "trinh", "trinh", "tai", "tinhoc1223.edu.vn"];
+      document.writeln(mang.valueOf());
+
+      //array.push()
+      mang.push("<br>mien phi");
+      document.writeln("<br>" + mang.valueOf());
+
+      //array.pop()
+      mang.pop("<br>mien phi");
+      document.writeln("<br>" + mang.valueOf());
+
+      //shift()
+      mang.shift();
+      document.writeln("<br>" + mang.valueOf());
+
+      //unshift()
+      mang.unshift("chao mung");
+      document.writeln("<br>" + mang.valueOf());
+
+      //splice()
+      mang.splice(1, 2, "PHP", "can ban");
+      document.writeln("<br>" + mang.valueOf());
+
+      mang.splice(1, 2);
+      document.writeln("<br>" + mang.valueOf());
+
+      //slice()
+      var mang = ["hoc", "lap", "trinh", "tai", "tinhoc1223.edu.vn"];
+      var mang_moi = mang.slice(3, 5);
+      document.writeln("<br>" + mang_moi.valueOf());
+
+      //sort()
+      var a = [1, 2, "X", false, true, "A"];
+      a.sort();
+      document.writeln("<br>" + a);
+
+      //reverse()
+      var b = [1, 2, "X", false, true, "A"];
+      b.reverse();
+      document.writeln("<br>" + b);
+
+      //concat()
+      var mang1 = ["hoc", "lap", "trinh"];
+      var mang2 = ["tai", "tinhoc1223.edu.vn"];
+      var mang_moi = mang1.concat(mang2);
+      document.writeln("<br>"+ mang_moi);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Click me" id="clickme" />
+
+    <ul>
+      <li><a href="#" onclick="do_something()">Tin cong nghe</a></li>
+      <li><a href="#" onclick="do_something()">Tin trong nuoc</a></li>
+      <li><a href="#" onclick="do_something()">Tin thoi su</a></li>
+    </ul>
+
+    <ul>
+      <li><a href="#" class="show">Tin cong nghe</a></li>
+      <li><a href="#">Tin trong nuoc</a></li>
+      <li><a href="#" class="show">Tin thoi su</a></li>
+    </ul>
+
+    <!-- hiển thị nội dung ô input -->
+    <div id="result"></div>
+    <input type="text" name="" id="message" onkeyup="show_result()" />
+
+    <!-- thông báo copy thành công  -->
+    <h3>Hãy copy dòng chữ dưới đây</h3>
+    <div oncopy="show()">Chào mừng bạn đến với thế giới JavaScript</div>
+
+    <!-- tính tổng hai số  -->
+    <form action="">
+      a: <input type="text" name="" id="a" onkeyup="tinh()" /> b:
+      <input type="text" name="" id="b" onkeyup="tinh()" /> Kết quả:
+      <input type="text" id="kq" value="" />
+    </form>
+
+    <!-- validate form -->
+    <br />
+    <form action="">
+      Username:
+      <input type="text" name="username" id="username" />
+      <br />
+      Password:
+      <input type="text" name="password" id="password" />
+      <br />
+      Re Password
+      <input type="text" name="re-password" id="re-password" />
+      <br />
+      <input type="submit" value="Register" onclick="return validate()" />
+    </form>
+
+    <script>
+      //event button
+      document.getElementById("clickme").onclick = function () {
+        alert("Ban da click vao nut nay!");
+      };
+
+      //event link
+      function do_something() {
+        alert("Ban da click vao link nay!");
+      }
+
+      var a_list = document.getElementsByClassName("show");
+
+      for (var i = 0; i < a_list.length; i++) {
+        a_list[i].onclick = function () {
+          alert("Ban da click vao nut nay!");
+          return false;
+        };
+      }
+
+      //hiển thị nội dung ô input
+      function show_result() {
+        var input = document.getElementById("message").value;
+        var div = document.getElementById("result");
+        div.innerHTML = input;
+      }
+
+      //thông báo copy thành công
+      function show() {
+        alert("Bạn đã copy thành công");
+      }
+
+      //tính tổng từ hai số
+      function tinh() {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var kq = document.getElementById("kq");
+
+        var tong = parseFloat(a) + parseFloat(b);
+
+        if (!isNaN(tong)) kq.value = tong;
+      }
+
+      //validate form
+      function validate() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var re_password = document.getElementById("re-password").value;
+
+        if (username == "") {
+          alert("Bạn chưa nhập tên đăng nhập");
+          return false;
+        }
+
+        if (password == "") {
+          alert("Bạn chưa nhập mật khẩukhẩu");
+          return false;
+        }
+
+        if (password != re_password) {
+          alert("Mật khẩu nhập lại không đúng ");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function check_number(number) {
+        if (number % 2 == 0) {
+          alert(number + " là số chẵn");
+        } else {
+          alert(number + " là số lẻ ");
+        }
+      }
+
+      check_number(3);
+
+      //arrow function
+      var chia_het_cho_3 = (number) => {
+        if (number % 3 == 0) {
+          return true;
+        }
+        return false;
+      };
+
+      document.onkeypress = function (e) {
+        alert("Một phím vừa được nhấn");
+      };
+
+      //console.log function
+      var website = "tinhoc123.edu.vn";
+      console.log(website);
+
+      //alert function
+      alert("hello world");
+
+      //confrim function
+      var cf = confirm("Are you sure");
+
+      //   prompt function
+      var ln = prompt("Yout lastname: ");
+      var fn = prompt("Yout firstname: ");
+      document.writeln("Your fullname is " + ln + " " + fn);
+
+      //setTimeout, clearTimeout function
+      var do_alert = setTimeout(function () {
+        alert("Chào mừng bạn đến với tinhoc123.edu.vn");
+      }, 3000);
+      function clearTimeout() {
+        clearTimeout(do_alert);
+      }
+
+      //setInterval, clearInterval
+      let timerId = setInterval(() => alert("hello"), 3000);
+
+      setTimeout(() => {
+        clearInterval(timerId);
+        alert("Bye");
+      });
+      setTimeout(() => {
+        clearInterval(timerId);
+        alert("Bye");
+      }, 6000);
+
+      //hàm kiểm tra một năm phải năm nhuận hay không
+      function nam_nhuan(nam) {
+        if (nam % 100 == 0) {
+          if (nam % 400 == 0) alert(nam + " là năm nhuận.");
+          else alert(nam + " không phải năm nhuận.");
+        } else if (nam % 4 == 0) alert(nam + " là năm nhuận.");
+        else alert(nam + " không phải năm nhuận.");
+      }
+      nam_nhuan(4);
+    </script>
+  </body>
+</html>

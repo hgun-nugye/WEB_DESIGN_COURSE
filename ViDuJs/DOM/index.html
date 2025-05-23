@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="content">Nội dung của thẻ div</div>
+    <input
+      type="button"
+      value="Lấy nội dung "
+      id="get_content"
+      onclick="getContent()"
+    />
+    <input
+      type="button"
+      value="Thay đổi nội dung "
+      id="set_content"
+      onclick="setContent()"
+    />
+
+    <input type="button" value="click me" id="object" onclick="change()" />
+
+    <div id="message">Welcome to javascript</div>
+    <input
+      type="button"
+      value="Change backgroud"
+      onclick="change_background()"
+    />
+
+    <input type="button" value="Change color" onclick="change_color()" />
+
+    <input type="button" value="Change height" onclick="change_height()" />
+
+    <input type="button" value="Change fontsize" onclick="change_font_size()" />
+
+    <script>
+      function setContent() {
+        document.getElementById("content").innerHTML =
+          "<h1>Nội dung đã được thay đổi </h1>";
+      }
+
+      function getContent() {
+        var html = document.getElementById("content").innerText;
+        alert("Nội dung cần lấy là: " + html);
+      }
+
+      function change() {
+        var obj = document.getElementById("object");
+        var type = obj.type;
+        if (type == "button") {
+          obj.type = "text";
+        } else obj.type = "button";
+      }
+    </script>
+
+    <script language="javascript">
+      function change_background() {
+        document.getElementById("message").style.background = "red";
+      }
+      function change_color() {
+        document.getElementById("message").style.color = "blue";
+      }
+      function change_height() {
+        document.getElementById("message").style.height = "500px";
+      }
+      function change_font_size() {
+        document.getElementById("message").style.fontSize = "500px";
+      }
+    </script>
+
+    <script>
+      var p = document.createElement("p");
+      p.innerHTML = "Học DOM Nodes";
+      document.getElementsByTagName("body")[0].appendChild(p);
+    </script>
+  </body>
+</html>

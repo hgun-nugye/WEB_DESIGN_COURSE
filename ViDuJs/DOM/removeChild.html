@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="content">
+      <h5>Chúc vui vẻ khi học bài </h5>
+    </div>
+    <input type="button" value="Remove" id="btn-remove" />
+
+    <script language="javascript">
+      var button = document.getElementById("btn-remove");
+      button.addEventListener("click", function () {
+        var need_remove = document.getElementsByTagName("h5")[0];
+        document.getElementById("content").removeChild(need_remove);
+      });
+    </script>
+  </body>
+</html>

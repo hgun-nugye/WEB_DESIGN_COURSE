@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //nối chuỗi
+      var website = "website" + " tinhoc123.edu.vn";
+
+      //ép chuỗi
+      var number = 12;
+      alert(typeof number);
+
+      number = number.toString();
+      alert(typeof number);
+
+      //ép chuỗi sử dụng đối tượng String hoặc hàm String
+      //String object
+      var message = new String("Chào mừng bạn đến với tin học 123.edu.vn");
+      //String function
+      var message2 = String("Chào mừng bạn đến với tinhoc123.edu.vn");
+
+      //hàm xử lý chuỗi
+      var txt = "tinhoc123.edu.vn";
+      var sln = txt.length;
+
+      var string = "Welcome tinhoc123.edu.vn";
+      document.writeln(string.charAt(1));
+      document.writeln(string.charCodeAt(1) + "<br>");
+
+      var string2 = "Chào mừng bạn đến với tinhoc1223.edu.vn";
+      document.writeln(
+        "Vị trí xuất hiện chuỗi tinhoc123.edu.vn là: " +
+          string.indexOf("tinhoc123.edu.vn")
+      );
+
+      var str = "Please locate where 'locate' occurs!";
+      var pos1 = str.indexOf("locate");
+      var pos2 = str.lastIndexOf("locate");
+      var pos3 = str.search("locate");
+
+      //substr
+      var st = "ABC abc";
+      var s = st.substr(1, 2);
+
+      //slice
+      var string = "welcome to tinhoc123.edu.vn";
+      document.writeln("Chuỗi cần lấy là: " + string.slice(11, 27));
+      document.writeln("Chuỗi cần lấy là: " + string.slice(-16, 27));
+
+      var string = "Welcome " + "to " + "tinhoc123.edu.vn";
+      document.writeln(string + "<br>");
+      //hoặc
+      var string = "welcom";
+      string = string.concat("to ", "tinhoc123.edu.vn");
+      document.writeln(string + "<br>");
+
+      //split
+      var st = "ABC-abc-XYZ-123";
+      var itemArray = new Array();
+      itemArray = st.split("-");
+      document.writeln(itemArray);
+
+      //match
+      var st = "ABC abc";
+      var s = st.match("abc");
+
+      //replace
+      var st = "ABC abc";
+      var s = st.replace("abc", "xyz");
+
+      //toLowerCase
+      var st = "ABC abc";
+      var s = st.toLowerCase();
+      document.writeln("<br>" + s);
+
+      //toUpperCase
+      var st = "ABC abc";
+      var s = st.toUpperCase();
+      document.writeln("<br>" + s);
+
+      //duyệt qua từng ký tự trong chuỗi
+      let domain = "tinhoc123.edu.vn";
+      for (var i = 0; i < domain.length; i++) {
+        console.log(domain[i]);
+      }
+    </script>
+  </body>
+</html>

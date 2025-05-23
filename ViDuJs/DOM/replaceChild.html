@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="content">
+      <h5>Chúc vui vẻ khi học bài</h5>
+    </div>
+    <input type="button" value="Replace" id="btn-replace" />
+
+    <script language="javascript">
+      var button = document.getElementById("btn-replace");
+      button.addEventListener("click", function () {
+        var p = document.createElement("h1");
+        p.innerHTML = "Hello!";
+        var replace = document.getElementsByTagName("h5")[0];
+        document.getElementById("content").replaceChild(p, replace);
+      });
+    </script>
+  </body>
+</html>

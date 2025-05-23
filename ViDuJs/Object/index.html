@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name, job){
+            this.name=name;
+            this.job=job;
+            this.intro=function(){
+                return "Tôi tên là "+name +", tôi là một " + job;
+            }
+        }
+        var p=new Person("Sơn", "Sinh viên");
+        p.job="Giảng viên";
+        document.writeln(p.intro());
+    </script>
+</body>
+</html>

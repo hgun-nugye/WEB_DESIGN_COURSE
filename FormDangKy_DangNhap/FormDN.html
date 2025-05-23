@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./StyleDN.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./StyleDN.css" />
     <title>Form Dang Nhap</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <form action="">
-        <h2>FORM ĐĂNG NHẬP </h2>
+      <h2>FORM ĐĂNG NHẬP</h2>
 
-        <div class="user">
-            <input type="text" name="user" id="user_name">
-            <ion-icon name="person-circle-outline"></ion-icon>
-            <!-- <i class='bx bx-user-circle'></i> -->
-        </div>
+      <div class="user">
+        <input type="text" name="user" id="user_name" />
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <!-- <i class='bx bx-user-circle'></i> -->
+      </div>
 
-        <div class="password">
-            <input type="text" name="password" id="password">
-            <ion-icon name="eye-off-outline" onclick="hide()" id="eye-icon"></ion-icon>
-        </div>
-
-        <button type="submit">Đăng Nhập </button>
-        <button type="button" id="reset"><a href="./FormDK.html">Đăng Ký</a></button>
+      <div class="password">
+        <input type="text" name="password" id="password" />
+        <ion-icon
+          name="eye-off-outline"
+          onclick="hide()"
+          id="eye-icon"
+        ></ion-icon>
+      </div>
+      <!-- để ẩn hiện mật khẩu qua việc dùng type input:
+        <form action="">
+            <input type="password" name="ps" id="ps">
+            <input type="checkbox" name="" id="" onclick="ps.type=this.checked?'text':'password'">
+        </form>
+     -->
+      <button type="submit">Đăng Nhập</button>
+      <button type="button" id="reset">
+        <a href="./FormDK.html">Đăng Ký</a>
+      </button>
     </form>
 
     <script>
-        function hide() {
-            var typePass = document.getElementById('password');
-            var eyePass = document.getElementById('eye-icon');
+      function hide() {
+        var typePass = document.getElementById("password");
+        var eyePass = document.getElementById("eye-icon");
 
-            if (typePass.type == "text") {
-                typePass.type = 'password';
-                eyePass.setAttribute('name','eye-outline');
-            }
-            else {
-                typePass.type = "text";
-                eyePass.setAttribute('name',"eye-off-outline");
-
-            }
-
+        if (typePass.type == "text") {
+          typePass.type = "password";
+          eyePass.setAttribute("name", "eye-outline");
+        } else {
+          typePass.type = "text";
+          eyePass.setAttribute("name", "eye-off-outline");
         }
-
+      }
     </script>
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

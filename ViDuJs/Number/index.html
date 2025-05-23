@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //number.toString(type)
+      var myNum = 128;
+      document.writeln(myNum.toString(16) + "<br>");
+      document.writeln(myNum.toString(8) + "<br>");
+      document.writeln(myNum.toString(2) + "<br>");
+
+      //số infinity
+      var myNumber = 2;
+      while (myNumber != Infinity) {
+        myNumber = myNumber + myNumber;
+      }
+      document.writeln("Giá trị của myNumber là: " + myNumber);
+
+      //NaN
+      var x = 2 / "tinhoc123.edu.vn";
+      var y = 10 / "2";
+      document.writeln("<br>x= " + x + "; y= " + y);
+
+      //Numbers-object
+      var x = 123;
+      var y = new Number(123);
+
+      //eval()
+      x = 2;
+      y = eval("x*2+3");
+      y = eval("x>2");
+      y = eval("123.456");
+
+      //Number
+      var boolean_true = true;
+      document.writeln("<br>" +Number(boolean_true));
+      var boolean_false = false;
+      document.writeln(Number(boolean_false));
+      var string_str="tinhoc123.edu.vn";
+      document.writeln(Number(string_str));
+      var string_num="100";
+      document.writeln(Number(string_num));
+      var date=new Date();
+      document.writeln(Number(date));
+
+      //parseInt
+      var boolean_true = true;
+      document.writeln("<br>" +parseInt(boolean_true));
+      var boolean_false = false;
+      document.writeln(parseInt(boolean_false));
+      var string_str="10 tinhoc123.edu.vn";
+      document.writeln(parseInt(string_str));
+      var string_num="100";
+      document.writeln(parseInt(string_num));
+      var date=new Date();
+      document.writeln(parseInt(date));
+
+      //parseFloat
+      var boolean_true = true;
+      document.writeln("<br>" +parseFloat(boolean_true));
+      var boolean_false = false;
+      document.writeln(parseFloat(boolean_false));
+      var string_str="10 tinhoc123.edu.vn";
+      document.writeln(parseFloat(string_str));
+      var string_num="100";
+      document.writeln(parseFloat(string_num));
+      var date=new Date();
+      document.writeln(parseFloat(date));
+
+
+    </script>
+  </body>
+</html>

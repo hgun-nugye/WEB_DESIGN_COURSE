@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- xuất dữ liệu ô input  -->
+    <input type="text" name="" id="txt-val" value="" />
+    <div id="result"></div>
+
+    <!-- thêm sự kiện cho window -->
+    <h4>Bạn hãy zoom trình duyệt</h4>
+    <div id="result2"></div>
+
+    <!-- dãy số random khi di chuyển chuột  -->
+    <div id="ketqua"></div>
+    <input type="button" value="Stop Random" id="stop_random" />
+    <script>
+      //sự kiện onload
+      window.onload = function () {
+        do_validate();
+      };
+    </script>
+    <script>
+      function do_validate() {
+        alert(1);
+      }
+    </script>
+    <script>
+      alert(1);
+      window.onload = function () {
+        alert(3);
+      };
+      alert(2);
+    </script>
+    <script>
+      //xuất ô inputinput
+      var input = document.getElementById("txt-val");
+
+      input.addEventListener("keyup", function () {
+        document.getElementById("result").innerHTML = input.value;
+      });
+
+      input.addEventListener("keyup", function () {
+        if (input.value.length > 5) {
+          alert("Bạn đã nhập nhiều hơn 5 ký tự");
+        }
+      });
+
+      //zoom trình duyệt
+      window.addEventListener("resize", function () {
+        document.getElementById("result2").innerHTML = "Bạn vừa zoom Browser!";
+      });
+
+      // dãy số random khi di chuyển chuột
+      var ketqua = document.getElementById("ketqua");
+      var button = document.getElementById("stop_random");
+      var html = document.getElementsByTagName("html")[0];
+
+      function do_random() {
+        var random = Math.random();
+        ketqua.innerHTML = random;
+      }
+      html.addEventListener("mouseover", do_random);
+      button.addEventListener("click", function () {
+        html.removeEventListener("mouseover", do_random);
+      });
+    </script>
+  </body>
+</html>

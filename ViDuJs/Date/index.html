@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="startTime()">
+    <div id="timer"></div>
+    <script>
+      let today = new Date();
+      document.writeln(today);
+      let birthday1 = new Date("December 17, 1995 03:24:00");
+      document.writeln("<br>" + birthday1);
+      let birthday2 = new Date("1995-12-17T03:24:00");
+      document.writeln("<br>" + birthday2);
+      let birthday3 = new Date(1995, 11, 17);
+      document.writeln("<br>" + birthday3);
+      let birthday4 = new Date(1995, 11, 17, 3, 24, 0);
+      document.writeln("<br>" + birthday4);
+
+      //định dạng đầy đủ: ngày tháng năm giờ phút giây timezone
+      var d = new Date(
+        "Wed Mar 25 2015 09:56:24 GMT+0100 (W. Europe Standard Time)"
+      );
+      document.writeln("<br>" + d);
+
+      //function lấy ngày tháng năm
+      function getDDMMYYY(dateString) {
+        var dateParts = dateString.split("/");
+
+        //tháng bắt đầu từ 0 nên ta phải giảm đi 1: dateParts[1]-1
+        return new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
+      }
+      document.writeln("<br>" + getDDMMYYY("23 / 10 / 2023"));
+
+      //tạo đồng hồ online
+      function checkTime(i) {
+        if (i < 10) {
+          i = '0' + i;
+          return i;
+        }
+      }
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+
+        m= checkTime(m);
+        s= checkTime(s);
+
+        document.getElementById("timer").innerHTML = h + ":" + m + ":" + s;
+
+        var t = setTimeout(function () {
+          startTime();
+        }, 500);
+      }
+
+
+    </script>
+  </body>
+</html>
