@@ -1,0 +1,7 @@
+.navbar-toggler {
+  filter: invert(1);
+}
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(1);
+}
