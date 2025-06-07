@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Nguyễn Thị Thanh Hương</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- link css -->
+    <link rel="stylesheet" href="./asset/css/style.css" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        .active {
+            color: rgb(112, 183, 5) !important;
+            font-weight: bolder;
+        }
+
+        .carousel {
+            width: 75%;
+            height: fit-content;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+            color: white;
+            font-size: 10px !important;
+            border: 2px solid white;
+            border-radius: 50%;
+            padding: 10px !important;
+        }
+
+        .after-line:after {
+            position: absolute;
+            content: "";
+            width: 100px;
+            background-color: green;
+            height: 4px;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .card-title {
+            color: greenyellow;
+        }
+
+        .btn-success {
+            bottom: 10px !important;
+            right: 10px !important;
+            background-color: greenyellow;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body class="position-relative">
+    <header>
+        <!-- place navbar here -->
+        <nav class="navbar navbar-expand-xl navbar-light bg-light   ">
+            <div class="container ">
+                <a class="navbar-brand" href="#">
+                    <img src="./asset/images/logo.svg" alt="" class="w-100">
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse    " id="collapsibleNavId">
+                    <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" aria-current="page">Home
+                                <span class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pages</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Services</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="#">Services</a>
+                                <a class="dropdown-item" href="#">Services Details</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Doctors</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- Modal trigger button -->
+                    <button type="button" class=" btn-lg btn btn-success text-white" data-bs-toggle="modal"
+                        data-bs-target="#modalId">
+                        Book Appoitment
+                    </button>
+
+                    <!-- Modal Body -->
+                    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+                    <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg"
+                            role="document">
+                            <div class="modal-content p-4">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalTitleId">
+                                        Book An Appoitment
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id eum assumenda ad
+                                        accusantium obcaecati nostrum provident vitae quis suscipit nihil.</p>
+
+                                    <form action="">
+                                        <div class="d-flex justify-content-between pb-4">
+                                            <input type="text" class="col-xl-5 name" placeholder="Your name">
+                                            <input type="email" class="col-xl-5 " placeholder="Your Email">
+                                        </div>
+
+                                        <div class="d-flex justify-content-between pb-4">
+                                            <input type="number" class="col-xl-5" placeholder="Phone Number">
+                                            <input type="text" class="col-xl-5 dep" placeholder="Department">
+                                        </div>
+
+                                        <div class="d-flex justify-content-between pb-4">
+                                            <input type="text" class="col-xl-5 doctor" placeholder="Doctor">
+                                            <input type="date" class="col-xl-5" placeholder="mm/dd/yyyy">
+                                        </div>
+
+
+                                    </form>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                        placeholder="write your message here"></textarea>
+
+
+                                </div>
+                                <div class="modal-footer d-flex justify-content-between">
+
+
+                                    <button class="btn btn-success text-white " id="get-apoint"
+                                        onclick="if (success()) { /* Thực hiện hành động đặt lịch */ }">Get
+                                        Appoinment</button>
+
+                                    <button class="btn btn-success text-white " data-bs-dismiss="modal">Close</button>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Optional: Place to the bottom of scripts -->
+                    <script>
+                        const myModal = new bootstrap.Modal(
+                            document.getElementById("modalId"),
+                            options,
+                        );
+                    </script>
+
+
+
+
+
+
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+    <main>
+        <!-- slide -->
+        <div class="container-fluid bg-success">
+            <div id="carouselId" class="carousel slide w-100" data-bs-ride="carousel">
+                <div class="container">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-7 text-white d-flex align-items-center text-start">
+                                    <div>
+                                        <h2>
+                                            Superior solutions that help you to shine.
+                                        </h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ex accusantium
+                                            laudantium obcaecati soluta dicta facilis eum ratione fugit labore.</p>
+
+                                        <button class="text-black btn btn-light">Book Appointment</button>
+                                        <button class="text-black btn btn-light">About Us</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-5 ">
+                                    <img src="./asset/images/slider-1.png" class="w-75" alt="First slide" />
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-7 text-white d-flex align-items-center text-start">
+                                    <div>
+                                        <h2>
+                                            Superior solutions that help you to shine.
+                                        </h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ex accusantium
+                                            laudantium obcaecati soluta dicta facilis eum ratione fugit labore.</p>
+                                        <div class="btn">
+                                            <button class="text-black btn btn-light">Book Appointment</button>
+                                            <button class="text-black btn btn-light">About Us</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-5"><img src="./asset/images/slider-2.png" class="w-75"
+                                        alt="First slide" />
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-7 text-white d-flex align-items-center text-start">
+                                    <div>
+                                        <h2>
+                                            Superior solutions that help you to shine.
+                                        </h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ex accusantium
+                                            laudantium obcaecati soluta dicta facilis eum ratione fugit labore.</p>
+                                        <div class="btn">
+                                            <button class="text-black btn btn-light">Book Appointment</button>
+                                            <button class="text-black btn btn-light">About Us</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-5"><img src="./asset/images/slider-3.png" class="w-75"
+                                        alt="First slide" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="container-fluid">
+                    <button class="carousel-control-prev " type="button" data-bs-target="#carouselId"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselId"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- end slide -->
+
+        <!-- content -->
+        <div class="container mt-xl-4 mb-xl-5">
+            <div class="text-center pt-4 position-relative">
+                <h2 class="after-line mb-5 w-50 mx-auto">Our Outstanding Team Is Active To Help You!</h2>
+                <p class="mt-xl-4 mb-xl-4
+                ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum dolor dicta, iusto vel eius tempore
+                    corporis voluptatum distinctio ut maiores.</p>
+            </div>
+            <div class="row g-2 mt-xl-5">
+                <!-- card 1                -->
+                <div class="col-xl-3 col-md-12">
+                    <div class="card border-0 text-center bg-light">
+                        <img class="card-img-top" src="./asset/images/doctor1.jpg" alt="Title" />
+                        <div class="card-body">
+                            <h4 class="card-title">Cardiologist</h4>
+                            <p class="card-text text-success fw-bold">Dr.Felica Queen</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card 2              -->
+                <div class="col-xl-3 col-md-4">
+                    <div class="card border-0 text-center bg-light">
+                        <img class="card-img-top w-100 img-fluid" src="./asset/images/doctor2.jpg" alt="Title" />
+                        <div class="card-body">
+                            <h4 class="card-title">Cardiologist</h4>
+                            <p class="card-text text-success fw-bold">Dr.Felica Queen</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card 3                -->
+                <div class="col-xl-3 col-md-4">
+                    <div class="card border-0 text-center bg-light">
+                        <img class="card-img-top w-100 img-fluid" src="./asset/images/doctor3.jpg" alt="Title" />
+                        <div class="card-body">
+                            <h4 class="card-title">Cardiologist</h4>
+                            <p class="card-text text-success fw-bold">Dr.Felica Queen</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card 4               -->
+                <div class="col-xl-3 col-md-4">
+                    <div class="card border-0 text-center bg-light">
+                        <img class="card-img-top w-100 img-fluid" src="./asset/images/doctor4.jpg" alt="Title" />
+                        <div class="card-body">
+                            <h4 class="card-title">Cardiologist</h4>
+                            <p class="card-text text-success fw-bold">Dr.Felica Queen</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- end content -->
+
+
+
+    </main>
+    <footer>
+        <!-- place footer here -->
+        <div class="container-fluid bg-success text-white">
+            <div class="container py-3">
+                <div class="row">
+                    <div class="col-8">
+                        <p>Designed by Nguyễn Thị Thanh Hương </p>
+
+                    </div>
+
+                    <div class="col-4 d-flex justify-content-between align-items-center">
+                        <p>Tearm & Conditions</p>
+                        <p>FAQ</p>
+                        <p>Privacy Policy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- btn scroll -->
+        <a href="#"> <button class="btn btn-success position-fixed "><i class="bi bi-chevron-up"></i> </button>
+        </a>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        function success() {
+            var name = document.querySelector('.name').value.trim();
+            var email = document.querySelector('input[type="email"]').value.trim();
+            var phone = document.querySelector('input[type="number"]').value.trim();
+            var depart = document.querySelector('.dep').value.trim();
+            var doctor = document.querySelector('.doctor').value.trim();
+            var date = document.querySelector('input[type="date"]').value.trim();
+
+            if (!name || !email || !phone || !depart || !doctor || !date) {
+                alert("Vui lòng nhập đủ thông tin!");
+                return true;
+            }
+            else {
+                alert("Đăng ký lịch thành công!");
+                return true;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
